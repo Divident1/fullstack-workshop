@@ -1,0 +1,50 @@
+2024-01-15 08:00:01 INFO Application server started successfully
+2024-01-15 08:00:05 INFO Database connection pool initialized
+2024-01-15 08:01:23 INFO User login successful from 192.168.1.100
+2024-01-15 08:02:45 INFO Request processed from 192.168.1.100
+2024-01-15 08:03:12 WARNING High memory usage detected: 85%
+2024-01-15 08:05:33 INFO User login successful from 10.0.0.50
+2024-01-15 08:06:01 INFO Request processed from 10.0.0.50
+2024-01-15 08:07:22 ERROR Database connection failed: timeout after 30s
+2024-01-15 08:07:25 INFO Retrying database connection...
+2024-01-15 08:07:30 INFO Database connection restored
+2024-01-15 08:10:15 INFO User login successful from 172.16.0.25
+2024-01-15 08:12:44 WARNING Disk space running low: 90% used
+2024-01-15 08:15:00 INFO Scheduled backup started
+2024-01-15 08:15:33 INFO Request processed from 192.168.1.100
+2024-01-15 08:18:22 ERROR File not found: /var/data/config.xml
+2024-01-15 08:20:01 INFO User logout from 10.0.0.50
+2024-01-15 08:22:15 INFO Request processed from 172.16.0.25
+2024-01-15 08:25:00 INFO Scheduled backup completed successfully
+2024-01-15 08:30:12 WARNING CPU usage spike detected: 92%
+2024-01-15 08:32:45 INFO User login successful from 192.168.1.105
+2024-01-15 08:35:00 INFO Cache cleared successfully
+2024-01-15 08:38:22 ERROR Authentication failed for user admin from 203.0.113.50
+2024-01-15 08:40:15 WARNING Multiple failed login attempts from 203.0.113.50
+2024-01-15 08:42:01 INFO Request processed from 192.168.1.105
+2024-01-15 08:45:33 INFO User logout from 192.168.1.100
+2024-01-15 08:48:00 INFO System health check passed
+2024-01-15 08:50:22 ERROR Service unavailable: payment-gateway
+2024-01-15 08:50:30 INFO Initiating failover to backup payment service
+2024-01-15 08:50:45 INFO Failover completed successfully
+2024-01-15 08:55:12 WARNING Response time exceeded threshold: 2500ms
+2024-01-15 09:00:00 INFO Hourly metrics collected
+2024-01-15 09:02:33 INFO Request processed from 172.16.0.25
+2024-01-15 09:05:15 INFO User login successful from 10.0.0.75
+2024-01-15 09:08:44 ERROR Database query timeout: SELECT * FROM orders
+2024-01-15 09:10:00 INFO Query optimization triggered
+2024-01-15 09:12:22 INFO Request processed from 10.0.0.75
+2024-01-15 09:15:01 WARNING SSL certificate expires in 30 days
+2024-01-15 09:18:33 INFO User logout from 172.16.0.25
+2024-01-15 09:20:15 INFO New user registered from 192.168.1.200
+2024-01-15 09:22:45 INFO Email notification sent successfully
+2024-01-15 09:25:00 INFO Session cleanup completed: 15 expired sessions removed
+2024-01-15 09:28:12 ERROR External API rate limit exceeded
+2024-01-15 09:30:00 INFO Rate limiting backoff initiated
+2024-01-15 09:32:33 INFO Rate limiting backoff completed
+2024-01-15 09:35:15 INFO Request processed from 192.168.1.200
+2024-01-15 09:38:44 WARNING Memory usage: 88%
+2024-01-15 09:40:01 INFO Garbage collection triggered
+2024-01-15 09:40:15 INFO Garbage collection completed: 256MB freed
+2024-01-15 09:45:22 INFO User login successful from 192.168.1.100
+2024-01-15 09:48:00 INFO Application health: OK
