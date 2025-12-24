@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+    <h1>AngularJs Day2-- Directives</h1>
+
+    <p>2+3 ={{2+3}}</p>
+
+    <div ng-controller="MainController">
+
+        <button ng-click="toogleSkill()">Show/Hide skill</button>
+
+
+        <ul ng-show="showSkill">
+
+            <li ng-repeat="skill in skills"> 
+
+                {{skill}}
+            </li>
+        </ul>
+
+        <p ng-if="skills.length===0">
+
+            No skills are listed
+        </p>
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+
+        var app= angular.module("myApp",[])
+
+        app.controller("MainController", function($scope){
+
+            $scope.showSkill=true;
+
+            $scope.skills=["Angular", "ReatJs", "SpringBoot"];
+
+            $scope.toogleSkill=()=>{
+                $scope.showSkill=!$scope.showSkill;
+            };
+        });
+    </script>
+
+    
+</body>
+</html>

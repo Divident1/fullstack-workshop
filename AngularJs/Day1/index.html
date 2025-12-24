@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AngularJS Day 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  </head>
+
+  <body ng-app="myApp">
+    <h1>AngularJS Day 1</h1>
+    <p>2 + 3 = {{ 2 + 3 }}</p>
+    <p>Static Name: {{ "Gotam" }}</p>
+    <p>City: {{ "Bangalore" }}</p>
+
+
+    <div ng-controller="MainController">
+      <h2>User Details</h2>
+
+      <p>Name: {{ name }}</p>
+      <p>Role: {{ role }}</p>
+      <p>Company: {{ company }}</p>
+      <p>Experience: {{ experience }} years</p>
+
+      <hr />
+
+      <h2>Two-Way Data Binding</h2>
+
+      <label>Username:</label><br />
+      <input type="text" ng-model="username" placeholder="Enter username" />
+      <p>You typed: {{ username }}</p>
+
+      <br />
+    </div>
+    <script>
+      var app = angular.module("myApp", []);
+      app.controller("MainController", function ($scope) {
+        $scope.name = "Gotam";
+        $scope.role = "Software Developer";
+        $scope.company = "UST";
+        $scope.experience = 2;
+        $scope.username = "";
+        $scope.email = "";
+      });
+    </script>
+  </body>
+</html>
