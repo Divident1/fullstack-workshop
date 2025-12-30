@@ -1,56 +1,73 @@
 # Review: 04-html
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-30 12:15
+**Review Date:** 2025-12-30 15:27
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 4
+**Files submitted:** 5
 
 ### Required Files
 
-- ❌ Missing: `portfolio-v1.html`
-- ❌ Missing: `portfolio-v2.html`
-- ❌ Missing: `portfolio-v2.css`
-- ❌ Missing: `portfolio-v3.html`
+- ✅ Found: `portfolio-v1.html`
+- ✅ Found: `portfolio-v2.html`
+- ✅ Found: `portfolio-v2.css`
+- ✅ Found: `portfolio-v3.html`
 
 ### Code Review
 
-📄 **portfolio.html**
-   Path: `04-html/Challenge-01/portfolio.html`
-   Lines: 142
+📄 **portfolio-v1.html**
+   Path: `04-html/portfolio-v1.html`
+   Lines: 79
 
     - ✅ Has `<!DOCTYPE html>`
     - ✅ Uses semantic HTML5 tags
-    - ✅ Images have `alt` attributes
-    - ✅ Has viewport meta tag (mobile-friendly)
-    - ✅ Has `lang` attribute
-
-   **Score: 5/5**
-
-📄 **employee-table-v1.html**
-   Path: `04-html/Challenge-02/employee-table-v1.html`
-   Lines: 162
-
-    - ✅ Has `<!DOCTYPE html>`
-    - ✅ Uses semantic HTML5 tags
-    - ✅ Images have `alt` attributes
+    - ❌ Images missing `alt` attributes
     - ✅ Has viewport meta tag (mobile-friendly)
     - ✅ Has `lang` attribute
     - 📌 **Version 1 (Raw HTML)**
     - ✅ Pure semantic HTML (no styling)
 
-   **Score: 5/5**
+   **Score: 4/5**
 
-📄 **employee-table-v2.css**
-   Path: `04-html/Challenge-02/employee-table-v2.css`
-   Lines: 200
+📄 **portfolio-v2.css**
+   Path: `04-html/portfolio-v2.css`
+   Lines: 41
 
    - ✅ CSS file present
 
-### Topic Score: 10 / 30 (33%)
+📄 **portfolio-v2.html**
+   Path: `04-html/portfolio-v2.html`
+   Lines: 80
+
+    - ✅ Has `<!DOCTYPE html>`
+    - ✅ Uses semantic HTML5 tags
+    - ❌ Images missing `alt` attributes
+    - ✅ Has viewport meta tag (mobile-friendly)
+    - ✅ Has `lang` attribute
+    - 📌 **Version 2 (HTML + CSS3)**
+    - ✅ Links to CSS stylesheet
+
+   **Score: 4/5**
+
+📄 **portfolio-v3.html**
+   Path: `04-html/portfolio-v3.html`
+   Lines: 195
+
+    - ✅ Has `<!DOCTYPE html>`
+    - ✅ Uses semantic HTML5 tags
+    - ✅ Images have `alt` attributes
+    - ✅ Has viewport meta tag (mobile-friendly)
+    - ✅ Has `lang` attribute
+    - 📌 **Version 3 (Bootstrap)**
+    - ✅ Uses Bootstrap framework
+    - ✅ Uses Bootstrap classes
+
+   **Score: 5/5**
+
+### Topic Score: 33 / 35 (94%)
 
 ---
 
