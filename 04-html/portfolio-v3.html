@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/logo2.png">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <img src="./images/logo2.png" alt="My Portfolio Logo" style="height: 30px;width: 30px;">
+            <a class="navbar-brand" href="#">MyPortfolio</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="bg-secondary text-center vh-100 d-flex align-items-center">
+        <div class="container text-white">
+            <h1 class="display-4">Gotam Singh </h1>
+            <p class="lead">Aspiring Java Developer | Web Enthusiast</p>
+            <a href="#projects" class="btn btn-light btn-lg mt-3">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3">
+                    <img src="./images/photo.jpg.jpg" class="img-fluid rounded" alt="Profile Image">
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        I am a Computer Science graduate with a strong foundation in programming and web technologies.
+                        I enjoy building simple, clean applications and continuously improving my technical skills.
+                        I am passionate about learning Java, backend basics, and modern web development.
+                    </p>
+
+                    <h6>Skills</h6>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">HTML, CSS, Bootstrap</li>
+                        <li class="list-group-item">Java (Core Java)</li>
+                        <li class="list-group-item">SQL & Database Basics</li>
+                        <li class="list-group-item">Git & GitHub</li>
+                        <li class="list-group-item">Basic JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Projects</h2>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqTGgkVEdBIstnSHKFq8ZOdZPubHxSmssZhA&s"
+                            class="card-img-top" alt="Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Driver Drowsiness Detection</h5>
+                            <p class="card-text">
+                                A machine learning based system to detect driver fatigue using facial features.
+                            </p>
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-success">ML</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="https://miro.medium.com/v2/resize:fit:1200/1*Y0r18RDjLiMRGbZ2AfFRDg.jpeg"
+                            alt="Medicine Recommendation System Screenshot" style="height: 230px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Medicine Recommendation System</h5>
+                            <p class="card-text">
+                                A system that suggests medicines based on symptoms using machine learning.
+                            </p>
+                            <span class="badge bg-warning text-dark">Python</span>
+                            <span class="badge bg-primary">ML</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card h-100">
+                        <img src="https://www.wikihow.com/images/thumb/3/38/Make-a-To-Do-List-Step-5-Version-3.jpg/v4-460px-Make-a-To-Do-List-Step-5-Version-3.jpg"
+                            class="card-img-top" alt="Project" style="height: 230px;">
+                        <div class="card-body">
+                            <h5 class="card-title">To-Do List Web App</h5>
+                            <p class="card-text">
+                                A simple task management web application built using HTML, CSS, and JavaScript.
+                            </p>
+                            <span class="badge bg-info">HTML</span>
+                            <span class="badge bg-secondary">JavaScript</span>
+                        </div>
+                        <div class="card-footer text-center">
+                            <a href="#" class="btn btn-outline-primary btn-sm">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" rows="4" required></textarea>
+                        </div>
+
+                        <button class="btn btn-dark" type="submit">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <h5>Contact Info</h5>
+                    <p>Email: gotam00thakur@email.com</p>
+                    <p>Phone: +91 9XXXXXXXXX</p>
+                    <p>Location: Chennai, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#projects" class="text-white text-decoration-none">Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <h6>Follow Me</h6>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img src="https://helios-i.mashable.com/imagery/articles/044e8x59C0ICkJYCjzRv7Yt/hero-image.fill.size_1200x1200.v1650318899.png"
+                            style="height: 30px; width: 30px;" alt="Instagram Icon">
+                    </a>
+                </div>
+
+                <div class="col-md-4 text-md-end text-center mt-3 mt-md-0">
+                    <p class="mb-0">&copy; Gotam Singh</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

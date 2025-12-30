@@ -1,0 +1,42 @@
+       
+        h1 {
+            text-shadow:
+            1px 1px 2px rgb(245, 102, 102),
+            0 0 25px blue,
+            0 0 5px darkblue;
+            border: 2px solid;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        ul li {
+            float:left;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            background-color: #111111;
+        }
+        em{
+            text-decoration: underline wavy red;
+        }
+        p{
+            line-height: 2;
+            letter-spacing: -2px;
+            word-spacing: 5px;
+        }
+        h1:hover{
+            color: aqua;
+        }
