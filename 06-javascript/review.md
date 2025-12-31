@@ -1,71 +1,104 @@
 # Review: 06-javascript
 
 **Exercise:** Exercise
-**Review Date:** 2025-12-30 12:15
+**Review Date:** 2025-12-31 10:53
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 5
+**Files submitted:** 6
+
+### Relevance Check
+
+Unable to check - no exercise file
 
 ### Code Review
 
-📄 **basic-quiz.js**
-   Path: `06-javascript/challenge-01/basic-quiz.js`
-   Lines: 47
+📄 **counter.html**
+   Path: `06-javascript/challenge-01/counter.html`
+   Lines: 33
 
-    - ❌ Uses `var` (6 times) - use `let`/`const`
-    - ❌ Uses loose equality (`==`) 1 times
-    - 💡 Consider using arrow functions
-    - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
+    - ✅ Has `<!DOCTYPE html>`
+    - ✅ Uses semantic HTML5 tags
+    - ✅ Has viewport meta tag (mobile-friendly)
+    - ✅ Has `lang` attribute
 
-   **Score: 0/5**
+   **Score: 5/5**
 
-📄 **bmi-calculator.js**
-   Path: `06-javascript/challenge-02/bmi-calculator.js`
-   Lines: 70
+📄 **counter.js**
+   Path: `06-javascript/challenge-01/counter.js`
+   Lines: 39
 
-    - ❌ Uses `var` (12 times) - use `let`/`const`
-    - ❌ Uses loose equality (`==`) 3 times
-    - 💡 Consider using arrow functions
-    - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
-
-   **Score: 0/5**
-
-📄 **mad-libs.js**
-   Path: `06-javascript/challenge-03/mad-libs.js`
-   Lines: 17
-
-    - ❌ Uses `var` (6 times) - use `let`/`const`
+    - ✅ Uses `const`/`let` (no `var`)
     - ✅ Uses strict equality (`===`)
-    - 💡 Consider using arrow functions
+    - ✅ Uses arrow functions
+    - ✅ Uses template literals
+    - ✅ Uses modern array methods
+
+   **Score: 5/5**
+
+📄 **form-validator.html**
+   Path: `06-javascript/challenge-01/form-validator.html`
+   Lines: 58
+
+    - ✅ Has `<!DOCTYPE html>`
+    - ✅ Uses semantic HTML5 tags
+    - ✅ Has viewport meta tag (mobile-friendly)
+    - ✅ Has `lang` attribute
+
+   **Score: 5/5**
+
+📄 **form-validator.js**
+   Path: `06-javascript/challenge-01/form-validator.js`
+   Lines: 58
+
+    - ✅ Uses `const`/`let` (no `var`)
+    - ✅ Uses strict equality (`===`)
+    - ✅ Uses arrow functions
     - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
+    - ✅ Uses modern array methods
 
-   **Score: 1/5**
+   **Score: 4/5**
 
-📄 **temperature-converter.js**
-   Path: `06-javascript/challenge-04/temperature-converter.js`
-   Lines: 64
+📄 **password-validator.html**
+   Path: `06-javascript/challenge-01/password-validator.html`
+   Lines: 62
 
-    - ❌ Uses `var` (6 times) - use `let`/`const`
-    - ❌ Uses loose equality (`==`) 1 times
-    - 💡 Consider using arrow functions
-    - 💡 Consider using template literals for string interpolation
-    - 💡 Consider using array methods (map, filter, reduce)
+    - ✅ Has `<!DOCTYPE html>`
+    - ✅ Uses semantic HTML5 tags
+    - ✅ Has viewport meta tag (mobile-friendly)
+    - ✅ Has `lang` attribute
 
-   **Score: 0/5**
+   **Score: 5/5**
 
-### Topic Score: 1 / 20 (5%)
+📄 **password-validator.js**
+   Path: `06-javascript/challenge-01/password-validator.js`
+   Lines: 99
+
+    - ✅ Uses `const`/`let` (no `var`)
+    - ✅ Uses strict equality (`===`)
+    - ✅ Uses arrow functions
+    - ✅ Uses template literals
+    - ✅ Uses modern array methods
+
+   **Score: 5/5**
+
+### Topic Score: 29 / 30 (96%)
 
 ---
 
 ## Challenge
 
-**Status:** ✅ Submitted (1 files)
+**Status:** ✅ Submitted (6 files)
+
+### Challenge Relevance Check
+
+❌ **Submission does NOT match exercise requirements**
+   Expected keywords: task manager todo add delete
+   Found only: add 
+   **Please review the exercise requirements and resubmit**
+
 
 ---
 

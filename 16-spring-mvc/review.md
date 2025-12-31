@@ -1,13 +1,17 @@
 # Review: 16-spring-mvc
 
 **Exercise:**  Exercise: Build a Web Application with Spring MVC
-**Review Date:** 2025-12-30 12:15
+**Review Date:** 2025-12-31 10:53
 
 ---
 
 ## Status: ✅ Submitted
 
-**Files submitted:** 1
+**Files submitted:** 0
+
+### Relevance Check
+
+Relevance check not configured for this topic
 
 ### Required Files
 
