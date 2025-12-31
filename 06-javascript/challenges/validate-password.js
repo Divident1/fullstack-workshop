@@ -81,7 +81,7 @@ pwdInput.addEventListener("input", () => {
     scoreMsg.textContent = `Strength: ${result.score}/100`;
 
     if (result.isValid) {
-        pwdMsg.textContent = `Strong password ✅`;
+        pwdMsg.textContent = `Strong password `;
         pwdMsg.style.color = `green`;
         errorMsg.textContent = ``;
         isPasswordValid = true;

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Component</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        /* Container styling */
+        .accordion-container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Item styling */
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Header styling */
+        .accordion-header {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 1rem 1.5rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .accordion-header:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* Expanded State for Header */
+        .accordion-header[aria-expanded="true"] {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+
+        /* Icon styling */
+        .accordion-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        /* Icon Rotation */
+        .accordion-header[aria-expanded="true"] .accordion-icon {
+            transform: rotate(180deg);
+            color: #007bff;
+        }
+
+        /* Content styling */
+        .accordion-content {
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease;
+        }
+
+        .accordion-body {
+            padding: 1.5rem;
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            border-top: 1px solid transparent;
+            /* Keeps border logic clean during expansion */
+        }
+
+        .accordion-header[aria-expanded="true"]+.accordion-content .accordion-body {
+            border-top-color: #eee;
+        }
+
+        /* Controls styling */
+        .controls {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        label {
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript Accordion</h1>
+
+    <div class="controls">
+        <label>
+            <input type="checkbox" id="toggle-multiple"> Allow multiple open
+        </label>
+    </div>
+
+    <div id="accordion-wrapper" class="accordion-container">
+
+    </div>
+
+    <script src="accordion.js"></script>
+    <script>
+        const accordionData = [
+            {
+                title: 'What is JavaScript?',
+                content: 'JavaScript is a programming language widely used in web development to create interactive effects within web browsers.'
+            },
+            {
+                title: 'What is the DOM?',
+                content: 'The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content.'
+            },
+            {
+                title: 'What are events?',
+                content: 'Events are things that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can "react" on these events.'
+            },
+            {
+                title: 'How does this accordion work?',
+                content: 'It uses JavaScript to toggle the height of the content area. CSS transitions provide the smooth animation effect.'
+            }
+        ];
+
+        const container = document.getElementById('accordion-wrapper');
+        const multipleCheckbox = document.getElementById('toggle-multiple');
+
+        // Initial creation
+        let accordion = createAccordion(container, accordionData, { allowMultiple: false });
+
+        // Toggle multiple support
+        multipleCheckbox.addEventListener('change', (e) => {
+            // Simple way: clear and re-create for this demo
+            container.innerHTML = '';
+            accordion = createAccordion(container, accordionData, { allowMultiple: e.target.checked });
+        });
+    </script>
+</body>
+
+</html>
