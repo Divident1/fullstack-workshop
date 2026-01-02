@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Component</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .simple-tabs {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .tab-headers {
+            display: flex;
+            border-bottom: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab-btn {
+            padding: 12px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 16px;
+            outline: none;
+            flex: 1;
+            transition: background 0.2s;
+            border-right: 1px solid #ddd;
+        }
+
+        .tab-btn:last-child {
+            border-right: none;
+        }
+
+        .tab-btn:hover {
+            background-color: #ddd;
+        }
+
+        .tab-btn.active {
+            background-color: #fff;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+            /* Blend with content */
+            margin-bottom: -1px;
+            /* Overlap border */
+        }
+
+        .tab-body {
+            padding: 20px;
+            min-height: 150px;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Tabs Component Challenge</h1>
+
+    <div id="tabs-wrapper">
+        <!-- Tabs will be generated here -->
+    </div>
+
+    <script src="tabs.js"></script>
+    <script>
+        const tabsData = [
+            { title: 'Overview', content: 'Overview content here... This tab gives a general idea of the product.' },
+            { title: 'Features', content: 'Features content here...<ul><li>Fast</li><li>Reliable</li><li>Secure</li></ul>' },
+            { title: 'Pricing', content: 'Pricing content here...<br><strong>$10/month</strong> - Basic<br><strong>$20/month</strong> - Pro' }
+        ];
+
+        const container = document.getElementById('tabs-wrapper');
+        createTabs(container, tabsData);
+    </script>
+</body>
+
+</html>
