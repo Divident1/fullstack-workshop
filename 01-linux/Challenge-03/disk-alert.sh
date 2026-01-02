@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 THRESHOLD=${1:-90}
 EXIT_CODE=0
