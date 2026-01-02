@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz App</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+
+        /* --- Interactive Options --- */
+        .option-item {
+            padding: 15px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: white;
+            /* Ensure text is white */
+        }
+
+        .option-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .option-item.selected {
+            background: rgba(13, 110, 253, 0.15);
+            border-color: #0d6efd;
+            color: white;
+        }
+
+        /* --- Animations --- */
+        .timer-container.pulse {
+            animation: timerPulse 0.8s infinite;
+            color: #dc3545 !important;
+            background: rgba(220, 53, 69, 0.1) !important;
+            border-color: #dc3545 !important;
+        }
+
+        @keyframes timerPulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* --- Indicators --- */
+        .indicator-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .indicator-dot:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .indicator-dot.active {
+            background: #0d6efd;
+            transform: scale(1.2);
+        }
+
+        .indicator-dot.completed {
+            background: #198754;
+        }
+
+        /* --- Score Circle --- */
+        .score-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: relative;
+            box-shadow: 0 0 20px rgba(25, 135, 84, 0.3);
+        }
+
+        .score-circle::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: #212529;
+            border-radius: 50%;
+            top: 10px;
+            left: 10px;
+            z-index: 0;
+        }
+
+        .score-circle span {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* --- Review Items --- */
+        .review-item {
+            padding: 10px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+            border-left: 4px solid transparent;
+        }
+
+        .review-item.correct {
+            border-left-color: #198754;
+        }
+
+        .review-item.incorrect {
+            border-left-color: #dc3545;
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-light">
+
+    <div class="container d-flex align-items-center justify-content-center min-vh-100">
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="text-center">
+            <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <h2 class="mt-3">Loading Quiz...</h2>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-screen" class="card shadow-lg border-0 d-none"
+            style="width: 100%; max-width: 700px; background: rgba(33, 37, 41, 0.95);">
+            <div class="card-body p-4 p-md-5">
+
+                <!-- Header -->
+                <header class="mb-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h1 class="h3 fw-bold text-primary mb-0">Tech Quiz</h1>
+                        <div
+                            class="timer-container badge bg-secondary bg-opacity-25 text-light fs-6 px-3 py-2 rounded-pill border border-secondary border-opacity-25">
+                            <i class="fa-regular fa-clock me-1"></i>
+                            <span id="timer">30</span>s
+                        </div>
+                    </div>
+
+                    <div class="progress mb-2" style="height: 8px; background-color: rgba(255,255,255,0.1);">
+                        <div class="progress-bar" id="progress-bar" role="progressbar" style="width: 0%"></div>
+                    </div>
+
+                    <div class="text-secondary small">
+                        Question <span id="current-q-num">1</span> of <span id="total-q-num">10</span>
+                    </div>
+                </header>
+
+                <!-- Content -->
+                <main class="mb-4 quiz-content">
+                    <h2 id="question-text" class="h4 mb-4 fw-semibold text-white">Question text goes here?</h2>
+
+                    <div class="d-grid gap-3" id="options-container">
+                        <!-- Options injected via JS -->
+                    </div>
+                </main>
+
+                <!-- Footer -->
+                <footer
+                    class="d-flex justify-content-between align-items-center mt-5 pt-3 border-top border-secondary border-opacity-25">
+                    <button id="btn-prev" class="btn btn-outline-secondary" disabled>Previous</button>
+
+                    <div class="d-flex gap-2" id="prob-indicators">
+                        <!-- Indicators -->
+                    </div>
+
+                    <div class="action-buttons">
+                        <button id="btn-next" class="btn btn-primary px-4">Next</button>
+                        <button id="btn-submit" class="btn btn-success px-4 d-none">Submit</button>
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="card shadow-lg border-0 d-none"
+            style="width: 100%; max-width: 500px; background: rgba(33, 37, 41, 0.95);">
+            <div class="card-body p-5 text-center">
+
+                <div class="score-circle mx-auto mb-4 d-flex align-items-center justify-content-center">
+                    <span id="score-percent" class="display-6 fw-bold">0%</span>
+                </div>
+
+                <h2 class="mb-2">Quiz Completed!</h2>
+                <p class="text-secondary mb-4">You scored <span id="score-text">0/0</span></p>
+
+                <div class="review-section text-start mb-4" style="max-height: 250px; overflow-y: auto;">
+                    <h6 class="text-uppercase text-secondary small mb-3">Review</h6>
+                    <div id="review-list" class="d-grid gap-2">
+                        <!-- Review items -->
+                    </div>
+                </div>
+
+                <button id="btn-restart" class="btn btn-primary w-100 py-2">Restart Quiz</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
