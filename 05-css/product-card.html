@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1 style="text-align: center; margin-bottom: 40px; color: #333;">Featured Products</h1>
+
+    <div class="container">
+
+        <!-- Product Card 1: Standard -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://placehold.co/600x400/333/fff?text=Headphones" alt="Wireless Headphones"
+                    class="card-image">
+                <span class="card-badge">New</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Wireless Headphones</h3>
+                <p class="card-description">High-fidelity sound with noise cancellation and 30-hour battery life.
+                    Perfect for travel.</p>
+                <div class="card-price">
+                    <span class="price-value">$199.99</span>
+                </div>
+                <button class="card-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 2: Sale -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://placehold.co/600x400/555/fff?text=Smart+Watch" alt="Smart Watch" class="card-image">
+                <span class="card-badge sale">Sale</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Fitness Smart Watch</h3>
+                <p class="card-description">Track your workouts, heart rate, and sleep quality. Water resistant up to 50
+                    meters.</p>
+                <div class="card-price">
+                    <span class="price-original">$149.99</span>
+                    <span class="price-sale">$99.99</span>
+                </div>
+                <button class="card-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 3: Sold Out -->
+        <div class="card sold-out">
+            <div class="card-image-wrapper">
+                <img src="https://placehold.co/600x400/888/fff?text=Camera" alt="Digital Camera" class="card-image">
+                <div class="overlay">Sold Out</div>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">DSLR Camera</h3>
+                <p class="card-description">Professional grade photography with 4K video recording capabilities. Lens
+                    kit included.</p>
+                <div class="card-price">
+                    <span class="price-value">$899.99</span>
+                </div>
+                <button class="card-button" disabled>Out of Stock</button>
+            </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://placehold.co/600x400/222/fff?text=Coffee+Maker" alt="Coffee Maker" class="card-image">
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Premium Coffee Maker</h3>
+                <p class="card-description">Programmable drip coffee maker with thermal carafe. Wake up to fresh coffee.
+                </p>
+                <div class="card-price">
+                    <span class="price-value">$79.99</span>
+                </div>
+                <button class="card-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://placehold.co/600x400/444/fff?text=Sneakers" alt="Running Sneakers" class="card-image">
+                <span class="card-badge">New</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Running Sneakers</h3>
+                <p class="card-description">Lightweight, breathable mesh with responsive cushioning for your daily runs.
+                </p>
+                <div class="card-price">
+                    <span class="price-value">$120.00</span>
+                </div>
+                <button class="card-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="card">
+            <div class="card-image-wrapper">
+                <img src="https://placehold.co/600x400/666/fff?text=Backpack" alt="Laptop Backpack" class="card-image">
+                <span class="card-badge sale">Sale</span>
+            </div>
+            <div class="card-content">
+                <h3 class="card-title">Laptop Backpack</h3>
+                <p class="card-description">Durable water-resistant fabric with padded compartment for 15-inch laptops.
+                </p>
+                <div class="card-price">
+                    <span class="price-original">$59.99</span>
+                    <span class="price-sale">$39.99</span>
+                </div>
+                <button class="card-button">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
