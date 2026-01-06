@@ -1,7 +1,7 @@
 # Review: 24-kubernetes
 
 **Exercise:**  Exercise: Deploy Application to Kubernetes
-**Review Date:** 2025-12-31 10:53
+**Review Date:** 2026-01-05 15:04
 
 ---
 

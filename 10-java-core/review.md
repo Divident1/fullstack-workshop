@@ -1,7 +1,7 @@
 # Review: 10-java-core
 
-**Exercise:**  Exercise: Library Management System
-**Review Date:** 2025-12-31 10:53
+**Exercise:**  Java Core - Practice Exercises
+**Review Date:** 2026-01-05 15:04
 
 ---
 
@@ -29,7 +29,7 @@ Please complete the correct exercise and resubmit.
 
 **Status:** ⚠️ Not submitted
 
-Submit to: `10-java-core/challenges/`
+Submit to: `10-java-core/challenges/` or `10-java-core/challenge-01/`, `10-java-core/challenge-02/`, etc.
 
 ---
 
