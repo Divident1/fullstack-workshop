@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <h1>Simple Calculator</h1>
+    <button onclick="runCalculator()">Run Calculator</button>
+    <button onclick="runStringOps()">Run String Ops</button>
+
+    <script>
+        function runCalculator() {
+            // Exercise 5.1: Simple Calculator
+
+            // 1. Ask for two numbers
+            let num1 = prompt('Enter first number:');
+            let num2 = prompt('Enter second number:');
+
+            // 2. Convert to numbers
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            // 3. Perform calculations
+            let sum = num1 + num2;
+            let difference = num1 - num2;
+            let product = num1 * num2;
+            let quotient = num1 / num2;
+
+            // 4. Display results
+            console.log('--- Calculator Results ---');
+            console.log('Sum:', sum);
+            console.log('Difference:', difference);
+            console.log('Product:', product);
+            console.log('Quotient:', quotient);
+
+            alert(`Results in Console:\nSum: ${sum}\nDifference: ${difference}\nProduct: ${product}\nQuotient: ${quotient}`);
+        }
+
+        function runStringOps() {
+            // Exercise 5.2: String Operations
+            let message = 'Hello, JavaScript!';
+
+            console.log('--- String Operations ---');
+            // 1. Get the length
+            console.log('Message:', message);
+            console.log('Length:', message.length);
+
+            // 2. Convert to uppercase
+            console.log('Uppercase:', message.toUpperCase());
+
+            // 3. Convert to lowercase
+            console.log('Lowercase:', message.toLowerCase());
+
+            // 4. Get first character
+            console.log('First char:', message[0]);
+
+            // 5. Get last character
+            console.log('Last char:', message[message.length - 1]);
+
+            // 6. Check if it includes a word
+            console.log('Has "Java":', message.includes('Java'));
+
+            // 7. Replace a word
+            console.log('Replaced:', message.replace('JavaScript', 'World'));
+
+            alert('Check the console for string operation results!');
+        }
+    </script>
+</body>
+
+</html>

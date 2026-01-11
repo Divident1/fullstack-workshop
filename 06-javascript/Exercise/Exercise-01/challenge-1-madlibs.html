@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 1: Mad Libs</title>
+</head>
+
+<body>
+    <h1>Mad Libs Story Generator</h1>
+    <button onclick="startMadLibs()">Create Story</button>
+    <div id="storyOutput" style="margin-top: 20px; font-size: 1.2em;"></div>
+
+    <script>
+        function startMadLibs() {
+            // Ask the user for inputs
+            const name = prompt('Enter a name:');
+            const adjective = prompt('Enter an adjective:');
+            const noun = prompt('Enter a noun:');
+            const verb = prompt('Enter a verb (past tense):');
+            const place = prompt('Enter a place:');
+
+            if (name && adjective && noun && verb && place) {
+                // Create a story using their inputs
+                const story = `One day, ${name} found a ${adjective} ${noun} that ${verb} in the ${place}.`;
+
+                // Output to page and console
+                document.getElementById('storyOutput').innerText = story;
+                console.log(story);
+            } else {
+                alert('Please fill in all the prompts to create the story!');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Input/Output & Greetings</title>
+</head>
+
+<body>
+    <h1>JavaScript Input/Output Practice</h1>
+    <p>Open the console to see the output.</p>
+    <button onclick="runDemo()">Run Demo</button>
+
+    <script>
+        function runDemo() {
+            // Exercise 3.1: Alert, Prompt, Confirm
+            alert('Welcome to JavaScript!');
+
+            let userName = prompt('What is your name?');
+            console.log('User entered:', userName);
+
+            let isConfirmed = confirm('Do you want to continue to the greeting?');
+            console.log('User confirmed:', isConfirmed);
+
+            if (isConfirmed) {
+               
+                if (!userName) {
+                    name = prompt('What is your name? (Please enter a name)');
+                } else {
+                    name = userName;
+                }
+
+                // 2. Ask for their favorite color
+                let color = prompt('What is your favorite color?');
+
+                // 3. Display a personalized greeting using alert
+                if (name && color) {
+                    alert(`Hello, ${name}! Your favorite color is ${color}.`);
+                } else {
+                    alert('You didn\'t provide all the details!');
+                }
+
+                // 4. Log the info to console as well
+                console.log(`User: ${name}, Favorite Color: ${color}`);
+            }
+        }
+    </script>
+</body>
+
+</html>

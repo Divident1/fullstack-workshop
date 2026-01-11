@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 4: BMI Calculator</title>
+</head>
+
+<body>
+    <h1>BMI Calculator</h1>
+    <button onclick="calculateBMI()">Calculate BMI</button>
+
+    <script>
+        function calculateBMI() {
+            // Ask for weight and height
+            const weight = Number(prompt('Enter your weight in kg:'));
+            const height = Number(prompt('Enter your height in meters:'));
+
+            if (weight > 0 && height > 0) {
+                // Calculate BMI
+                const bmi = weight / (height * height);
+                let category = '';
+
+                // Determine category
+                if (bmi < 18.5) {
+                    category = 'Underweight';
+                } else if (bmi >= 18.5 && bmi <= 24.9) {
+                    category = 'Normal';
+                } else if (bmi >= 25 && bmi <= 29.9) {
+                    category = 'Overweight';
+                } else {
+                    category = 'Obese';
+                }
+
+                alert(`Your BMI is ${bmi.toFixed(1)}.\nCategory: ${category}`);
+            } else {
+                alert('Please enter valid positive numbers for weight and height.');
+            }
+        }
+    </script>
+</body>
+
+</html>

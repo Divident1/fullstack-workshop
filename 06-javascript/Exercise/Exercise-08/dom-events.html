@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 08: DOM Manipulation and Events</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+
+        section {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Styles for Part 2 */
+        .product-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .highlight {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        .active-style {
+            color: white;
+            background-color: blue;
+            padding: 10px;
+        }
+
+        /* Styles for Part 4 */
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            display: block;
+            min-height: 1.2em;
+        }
+
+        input.invalid {
+            border: 1px solid red;
+        }
+
+        #counter {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        #counter button {
+            padding: 5px 15px;
+            font-size: 1em;
+        }
+
+        #todo-list li {
+            margin: 5px 0;
+        }
+
+        .delete {
+            margin-left: 10px;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 08: DOM Manipulation & Events</h1>
+    <p>Open the console to see logs for Part 1.</p>
+
+    <!-- Part 1: DOM Selection -->
+    <section>
+        <h2>Part 1: DOM Selection</h2>
+        <div id="app">
+            <header class="header">
+                <h1>My App</h1>
+                <nav>
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </nav>
+            </header>
+            <main>
+                <article class="card" data-id="1">
+                    <h3>Card Title</h3>
+                    <p>Card content here</p>
+                </article>
+                <article class="card" data-id="2">
+                    <h3>Another Card</h3>
+                    <p>More content</p>
+                </article>
+            </main>
+        </div>
+    </section>
+
+    <!-- Part 2: DOM Manipulation -->
+    <section id="manipulation-section">
+        <h2>Part 2: DOM Manipulation</h2>
+
+        <h3>2.1 Create and Append</h3>
+        <div id="product-container"></div>
+
+        <h3>2.2 Modify Elements</h3>
+        <div id="box" class="container">Hello</div>
+
+        <h3>2.3 Remove and Replace</h3>
+        <ul id="list">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+        <button onclick="removeSecondItem()">Remove 2nd</button>
+        <button onclick="replaceFirstItem()">Replace 1st</button>
+        <button onclick="insertBeforeLast('Inserted Item')">Insert Before Last</button>
+        <button onclick="clearList()">Clear List</button>
+    </section>
+
+    <!-- Part 3: Event Handling -->
+    <section>
+        <h2>Part 3: Event Handling</h2>
+
+        <h3>3.1 Basic Events</h3>
+        <button id="btn">Click Me</button>
+
+        <h3>3.2 Event Object (Form)</h3>
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+
+        <h3>3.3 Event Delegation</h3>
+        <ul id="todo-list">
+            <li><span>Task 1</span> <button class="delete">X</button></li>
+            <li><span>Task 2</span> <button class="delete">X</button></li>
+        </ul>
+        <button
+            onclick="document.getElementById('todo-list').insertAdjacentHTML('beforeend', '<li><span>New Task</span> <button class=\'delete\'>X</button></li>')">Add
+            Task</button>
+
+        <h3>3.4 Keyboard Events</h3>
+        <p>Press any key to log it. Press ESC to see alert. Press Enter in text input to submit.</p>
+    </section>
+
+    <!-- Part 4: Practical Exercises -->
+    <section>
+        <h2>Part 4: Practical Exercises</h2>
+
+        <h3>4.1 Interactive Counter</h3>
+        <div id="counter">
+            <button id="decrement">-</button>
+            <span id="count">0</span>
+            <button id="increment">+</button>
+        </div>
+
+        <h3>4.2 Toggle Visibility</h3>
+        <button id="toggle-btn">Show Details</button>
+        <div id="details" class="hidden">
+            <p>These are the hidden details. You found them!</p>
+        </div>
+
+        <h3>4.3 Form Validation</h3>
+        <form id="signup-form" novalidate>
+            <div>
+                <input type="text" id="username" placeholder="Username (min 3 chars)">
+                <span class="error" id="username-error"></span>
+            </div>
+            <div>
+                <input type="email" id="email" placeholder="Email (must match pattern)">
+                <span class="error" id="email-error"></span>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </section>
+
+    <script src="dom-events.js"></script>
+</body>
+
+</html>

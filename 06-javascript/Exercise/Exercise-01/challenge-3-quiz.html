@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Challenge 3: Basic Quiz</title>
+</head>
+
+<body>
+    <h1>Simple Quiz</h1>
+    <button onclick="startQuiz()">Start Quiz</button>
+
+    <script>
+        function startQuiz() {
+            let score = 0;
+
+            // Question 1
+            const answer1 = prompt('1. What is 5 + 3?');
+            if (answer1 === '8') {
+                score++;
+                alert('Correct!');
+            } else {
+                alert('Wrong! The answer is 8.');
+            }
+
+            // Question 2
+            const answer2 = prompt('2. What is the capital of France?');
+            if (answer2 && answer2.toLowerCase() === 'paris') {
+                score++;
+                alert('Correct!');
+            } else {
+                alert('Wrong! The answer is Paris.');
+            }
+
+            // Question 3
+            const answer3 = prompt('3. What color is the sky? (Blue)');
+            if (answer3 && answer3.toLowerCase() === 'blue') {
+                score++;
+                alert('Correct!');
+            } else {
+                alert('Wrong! The answer is Blue.');
+            }
+
+            // Display final score
+            alert(`Quiz finished! You scored ${score} out of 3.`);
+        }
+    </script>
+</body>
+
+</html>
